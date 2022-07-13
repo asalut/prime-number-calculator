@@ -4,6 +4,20 @@ import java.util.regex.Pattern;
 
 public class NumberUtil {
 
+    private static Pattern natNumPattern = Pattern.compile("\\d+");
+
+    /**
+     * Returns true only if the given String is a natural number or 0
+     * @param strNum
+     * @return
+     */
+    public static boolean isNaturalNumber(String strNum) {
+        if (strNum == null) {
+            return false;
+        }
+        return natNumPattern.matcher(strNum).matches();
+    }
+
     /**
      * Using Primality Test Algorithm for faster iteration
      * @param thisNum

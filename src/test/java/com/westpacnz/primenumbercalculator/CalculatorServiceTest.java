@@ -41,4 +41,25 @@ class CalculatorServiceTest {
 		assertEquals(Long.valueOf(0), calculatorService.getPrimeNumberSum(6L,null));
 	}
 
+	@Test
+	void getPrimeNumberSum10M_givenValidParameters_calculateTill10M() {
+		// should return same values
+		Long sumAllPrimeNumTo10M = 3203324994356L;
+		assertEquals(sumAllPrimeNumTo10M, calculatorService.getPrimeNumberSum10M(0L));
+		assertEquals(sumAllPrimeNumTo10M, calculatorService.getPrimeNumberSum10M(1L));
+		assertEquals(sumAllPrimeNumTo10M, calculatorService.getPrimeNumberSum10M(2L));
+
+		// 10M isn't a prime number
+		assertEquals(Long.valueOf(0), calculatorService.getPrimeNumberSum10M(10000000L));
+
+		// 9999991 being the max prime number to 10M
+		assertEquals(Long.valueOf(9999991), calculatorService.getPrimeNumberSum10M(9999991L));
+	}
+
+	@Test
+	void getPrimeNumberSum10M_givenInvalidParameters_return0() {
+		// greater than 10M
+		assertEquals(Long.valueOf(0), calculatorService.getPrimeNumberSum10M(10000001L));
+		assertEquals(Long.valueOf(0), calculatorService.getPrimeNumberSum10M(null));
+	}
 }
