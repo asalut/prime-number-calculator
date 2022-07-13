@@ -14,15 +14,22 @@ public class PrimeNumberController {
 
     @GetMapping("/sum-10m")
     public ResponseEntity<Object> getSumOfPrimeNumbers(
-        @RequestParam(required = false) Integer startNum
+        @RequestParam(required = false) Long startNum
     ) {
         if (startNum != null) {
             // TODO: add checking
         } else {
             // if startNum is not set, use '2' as default
-            startNum = 2;
+            startNum = 2L;
         }
-
         return ResponseEntity.ok(calculatorService.getPrimeNumberSumTo10M(startNum));
+    }
+
+    @GetMapping("/sum-between")
+    public ResponseEntity<Object> getSumOfPrimeNumbersBetween(
+            @RequestParam Long startNum,
+            @RequestParam Long endNum
+    ) {
+        return ResponseEntity.ok(calculatorService.getPrimeNumberSum(startNum, endNum));
     }
 }
