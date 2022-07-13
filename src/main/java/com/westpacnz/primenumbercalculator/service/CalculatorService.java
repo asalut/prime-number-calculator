@@ -6,7 +6,7 @@ public class CalculatorService {
         Integer primeNumsSum = 0;
 
         // proceed only if endNum is greater than startNum
-        if (endNum >= startNum) {
+        if (startNum != null && endNum != null && endNum >= startNum) {
             // use a while loop till startNum is equal to endNum
             while(endNum >= startNum) {
 
@@ -24,6 +24,7 @@ public class CalculatorService {
         return primeNumsSum;
     }
 
+    // TODO: add more checking if necessary
     public static boolean isPrime(Integer thisNum) {
         // 2 is the smallest and only even prime number
         // all other numbers divisible by other than 1 are not prime numbers
@@ -33,7 +34,6 @@ public class CalculatorService {
                 && (thisNum.equals(3) || thisNum % 3 != 0)
                 && (thisNum.equals(5) || thisNum % 5 != 0)
                 && (thisNum.equals(7) || thisNum % 7 != 0)) {
-            // TODO: add more checking
             return true;
         }
         return false;
