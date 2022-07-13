@@ -26,6 +26,7 @@ Requirements:
 
 Steps:
 1. Download the project's generated prime-number-calculator-0.0.1.jar file
+- https://github.com/asalut/prime-number-calculator/blob/main/src/main/resources/prime-number-calculator-0.0.1.jar
 2. Run the application with the following steps:
 - 2.1. Open your CLI / Git Bash
 - 2.2. From the CLI, navigate to the directory of the downloaded prime-number-calculator-0.0.1.jar file
