@@ -8,7 +8,7 @@ public class NumberUtil {
         if (thisNum != null
                 && thisNum > 1) {
             System.out.println("Checking if " + thisNum + " is a prime number. Stops checking at " + thisNum / 2);
-            for (int i = 2; i < thisNum / 2; i++) {
+            for (int i = 2; i <= (thisNum / 2); i++) {
                 if (thisNum % i == 0) {
                     return false;
                 }
