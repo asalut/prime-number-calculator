@@ -9,9 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.westpacnz</groupId>
-	<artifactId>primenumbercalculator</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>primenumbercalculator</name>
+	<artifactId>prime-number-calculator</artifactId>
+	<version>0.0.1</version>
+	<name>prime-number-calculator</name>
+	<packaging>jar</packaging>
 	<description>Prime Number Calculator</description>
 	<properties>
 		<java.version>11</java.version>
