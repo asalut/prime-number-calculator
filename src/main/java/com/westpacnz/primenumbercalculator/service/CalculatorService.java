@@ -1,6 +1,7 @@
 package com.westpacnz.primenumbercalculator.service;
 
 import com.westpacnz.primenumbercalculator.util.NumberUtil;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -39,11 +40,13 @@ public class CalculatorService {
     }
 
     /**
-     * This will calculate from the given number up to 10,000,000
+     * This will calculate the sum of all the prime numbers from the given number up to 10,000,000
+     * Uses caching to avoid expensive processing with the same startNum values
      * @param startNum
      * @return
      */
-    public Long getPrimeNumberSumTo10M(Long startNum) {
+    @Cacheable(value = "sumPrimeNum10M", key = "#startNum")
+    public Long getPrimeNumberSum10M(Long startNum) {
         return getPrimeNumberSum(startNum, 10000000L);
     }
 }
