@@ -25,6 +25,10 @@ class CalculatorServiceTest {
 		// 11 is a prime number
 		expectedVal += 11L;
 		assertEquals(expectedVal, calculatorService.getPrimeNumberSum(1L,11L));
+
+		// test with bigger figures
+		assertEquals(Long.valueOf(24133), calculatorService.getPrimeNumberSum(1L,542L));
+		assertEquals(Long.valueOf(76127), calculatorService.getPrimeNumberSum(1L,1000L));
 	}
 
 	@Test
