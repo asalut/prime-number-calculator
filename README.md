@@ -34,9 +34,9 @@ Steps:
 - ***java -jar prime-number-calculator-0.0.1.jar***
 3. When the prime-number-calculator application is successfully running, open your Postman or another CLI/Git Bash/browser
 4. Access the above API by running the following curl command, or simply transfer the same setup to your Postman, etc...
-- curl --request GET "http://localhost:8080/prime-number/sum-10m"
+- ***curl --request GET "http://localhost:8080/prime-number/sum-10m"***
 - 4.1 In order to include a parameter to set the desired starting number for the calculation, simply add a ***startNum*** parameter with a numeric natural number value. For example:
-- curl --request GET "http://localhost:8080/prime-number/sum-10m?startNum=2"
+- ***curl --request GET "http://localhost:8080/prime-number/sum-10m?startNum=2"***
 5. Wait for the response. This could take longer (around 3 seconds) if you didn't enter a startNum value (will get ALL the prime numbers up to 10M) or if you entered a low value 
 
 For checking, this resource could be used to calculate the sum of prime numbers between the given numbers:
