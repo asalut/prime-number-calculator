@@ -14,11 +14,14 @@ public class NumberUtilTest {
     }
 
     @Test
-    void isPrime_givenBasePrimeNumbers_returnTrue() {
+    void isPrime_givenKnownPrimeNumbers_returnTrue() {
         assertTrue(NumberUtil.isPrime(2L));
         assertTrue(NumberUtil.isPrime(3L));
         assertTrue(NumberUtil.isPrime(5L));
         assertTrue(NumberUtil.isPrime(7L));
+        assertTrue(NumberUtil.isPrime(349L));
+        assertTrue(NumberUtil.isPrime(463L));
+        assertTrue(NumberUtil.isPrime(541L));
     }
 
     @Test
@@ -27,5 +30,6 @@ public class NumberUtilTest {
         assertFalse(NumberUtil.isPrime(0L));
         assertFalse(NumberUtil.isPrime(4L));
         assertFalse(NumberUtil.isPrime(10L));
+        assertFalse(NumberUtil.isPrime(533L));
     }
 }

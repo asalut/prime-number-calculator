@@ -17,3 +17,4 @@ For checking, this resource could be used to calculate the sum of prime numbers 
 - https://allmathsymbols.com/sum-of-prime-calculator/
 
 
+

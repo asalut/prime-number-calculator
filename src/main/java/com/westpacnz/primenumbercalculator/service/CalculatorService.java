@@ -15,6 +15,7 @@ public class CalculatorService {
     public Long getPrimeNumberSum(Long startNum, Long endNum) {
         Long primeNumsSum = 0L;
         Integer primeCounter = 0;
+        long startmillis = System.currentTimeMillis();
 
         // proceed only if endNum is greater than startNum
         if (startNum != null && endNum != null && endNum >= startNum) {
@@ -33,7 +34,7 @@ public class CalculatorService {
                 startNum += 1;
             }
         }
-        System.out.println(primeCounter + " prime numbers found, with a summed total of " + primeNumsSum);
+        System.out.println(primeCounter + " prime numbers found, with a summed total of " + primeNumsSum + ". Took " + (System.currentTimeMillis() - startmillis) + " ms");
         return primeNumsSum;
     }
 
